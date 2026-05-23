@@ -1,0 +1,147 @@
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            font-family: sans-serif;
+
+
+        }
+
+        nav {
+
+            padding: 8px 32px;
+            position: fixed;
+            top: 0;
+            left: 38%;
+            border: 2px solid #333;
+            border-radius: 32px;
+            z-index: 1000;
+            backdrop-filter: blur(2px);
+        }
+
+        .container {
+            border: 1px solid black;
+            border-radius: 8px;
+            width: 30%;
+            padding: 20px;
+            margin: 100px auto;
+            height: 80vh;
+
+        }
+
+
+
+        #Output {
+            border-radius: 6px;
+
+            word-break: break-all;
+            overflow-wrap: break-word;
+
+            min-height: 50px;
+            padding: 10px 5px 5px 5px;
+            text-align: right;
+
+            font-size: 35px;
+
+            margin-bottom: 10px;
+            color: black;
+        }
+
+        .containerAritmatika h3 {
+            font-size: 26px;
+            margin-bottom: 50px;
+        }
+
+        .inputNilai {
+            margin-bottom: 30px;
+        }
+
+        .listTombol {
+            border-top: 2px solid black;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .listTombol button {
+            cursor: pointer;
+            border: 1px solid rgb(151, 151, 151);
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            font-size: 25px;
+            padding: 15px 20px;
+        }
+
+        .listTombol button:active {
+            background-color: #d3d3d3;
+        }
+
+        .listTombol .spesial {
+            grid-column: span 3;
+        }
+
+        .row-span-2 {
+            grid-row: span 2;
+        }
+
+        .hilang {
+            display: none;
+        }
+
+        .backgroundHitam {
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.6);
+            /* Angka 0.6 = tingkat kegelapan (60%) */
+        }
+
+        .error {
+            z-index: 21;
+            position: fixed;
+            top: 300px;
+            right: 34%;
+            background-color: #333;
+            color: white;
+            width: 30%;
+            margin: auto;
+            padding: 16px;
+            border-radius: 8px;
+
+
+        }
+
+        .error h3 {
+            font-size: 26px;
+            margin-top: 0px;
+
+
+        }
+
+        @media (1px < width < 767px) {
+            nav {
+                margin-top: 12px;
+                padding: 4px 16px;
+                left: 9%;
+            }
+
+            .container {
+                height: 56vh;
+                width: 70%;
+            }
+
+            .listTombol {
+                padding-inline: 2px;
+            }
+
+            .error{
+                width: 50%;
+                right: 20%;
+            }
+            .error button {
+                padding: 4px 16px;
+            }
+        }
