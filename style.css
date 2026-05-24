@@ -42,6 +42,7 @@ nav {
 
     padding: 20px;
     margin: 100px auto;
+    min-height: 64vh;
     height: auto;
 
 }
