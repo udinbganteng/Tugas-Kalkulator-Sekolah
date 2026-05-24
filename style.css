@@ -1,9 +1,10 @@
 :root {
-    --bg : #FAF3E1;
+    --bg: #FAF3E1;
     --font: #222222;
     --warna-utama: #FA8112;
     --warna-sampingan: #F5E7C6;
 }
+
 * {
     box-sizing: border-box;
 }
@@ -27,7 +28,7 @@ nav {
     border-radius: 32px;
     z-index: 1000;
     color: var(--font);
-    
+
     backdrop-filter: blur(2px);
 }
 
@@ -53,7 +54,7 @@ nav {
     word-break: break-all;
     overflow-wrap: break-word;
 
-    min-height: 50px;
+    min-height: 100px;
     padding: 10px 5px 5px 5px;
     text-align: right;
 
@@ -129,7 +130,7 @@ nav {
     max-width: 350px;
     padding: 16px;
     border-radius: 8px;
-    box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .error h3 {
@@ -139,3 +140,28 @@ nav {
 
 }
 
+@media (1px < width < 767px) {
+    nav {
+        margin-top: 12px;
+        padding: 4px 32px;
+        
+    }
+
+    .container {
+        height: 56vh;
+        width: 70%;
+    }
+
+    .listTombol {
+        padding-inline: 2px;
+    }
+
+    .error {
+        width: 50%;
+        right: 20%;
+    }
+
+    .error button {
+        padding: 4px 16px;
+    }
+}
