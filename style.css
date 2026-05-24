@@ -144,13 +144,15 @@ nav {
 @media (1px < width < 767px) {
     nav {
         margin-top: 12px;
-        padding: 4px 32px;
+        padding: 4px 16px;
+        width: 85%;
+        text-align: center;
         
     }
 
     .container {
         height: 56vh;
-        width: 70%;
+        width: 80%;
     }
 
     .listTombol {
