@@ -11,7 +11,7 @@ let button = document.querySelectorAll('.tombol')
 
 // ini hanya untuk deklarasi operator untuk suatu kondisi aja. misal kayak membantu mendeklarasikan operator hitung apa aja yang dicari untuk mencegah 
 // operator menjadi lebih dari 1 ( kayak gini : 1++++2--2, padahal kan harus 1+2-2)
-const tandaHitung = ["+", "-", "×", "÷"]
+const tandaHitung = ["+", "-", "×", "÷","."]
 
 let tutup = false;
 let gerbang = false;
@@ -39,6 +39,10 @@ function hitung(nilai) {
         return;
     }
 
+    let angkaTerakhir = output.innerText.split(/[+-×÷/*]/).pop()
+    if (angkaTerakhir.includes(".")){
+        return
+    }
 
     // untuk mengecek nilai jika yang dipencet adalah operator hitung
     if (tandaHitung.includes(nilai)) {
@@ -74,6 +78,7 @@ function hitung(nilai) {
          
             // membuat variable hasil dengan method hitung eval() dan replace() untuk mengganti tanda x sama bagi
             let hasil = eval(output.innerText.replace(/÷/g, "/").replace(/×/g, "*")) // pakai regex global biar semuanya ke ganti
+            hasil = parseFloat(hasil.toFixed(10))
             output.innerText = hasil
 
         } catch {
